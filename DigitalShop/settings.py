@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'DigitalShop',
     'crispy_forms',
-    'crispy_bootstrap4'
+    'crispy_bootstrap4',
+    'products'
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap4'
