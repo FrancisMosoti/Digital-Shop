@@ -18,24 +18,28 @@
           <div class="swiper-slide">
             <div class="product-item ">
               <div class="image-holder position-relative">
-                <a href="single-product.html">
+                <a href="">
                   <img src="{% static '../' %}{{ product.image}}" alt="categories" class="product-image img-fluid">
                 </a>
-                <a href="wishlist.html" class="btn-icon btn-wishlist ">
+                <a href="" class="btn-icon btn-wishlist ">
                   <svg width="24" height="24" viewBox="0 0 24 24" class="svg-color">
                     <use xlink:href="#heart"></use>
                   </svg>
                 </a>
-                <a href="wishlist.html" class="btn-icon btn-cart ">
+                <a href="" class="btn-icon btn-cart ">
                   <svg width="24" height="24" viewBox="0 0 24 24" class="svg-color">
                     <use xlink:href="#cart"></use>
                   </svg>
                 </a>
                 <div class="product-content">
                   <h5 class="element-title text-uppercase fs-6 mt-3">
-                    <a href="single-product.html">{{ product.name }}</a>
+                    <a href="">{{ product.name }}</a>
                   </h5>
-                  <a href="#" class="text-decoration-none" data-after="Add to cart"><span>{{ product.price }}</span></a>
+                  <a href="#" class="text-decoration-none" data-after="Add to cart"><span>Ksh. {{ product.price }}</span></a>
+                    <br>
+                    <a href="/products/delete/{{ product.id }}" CLASS="btn btn-outline-danger">DELETE</a>
+                    <a href="/products/update/{{ product.id }}" class="btn btn-outline-info">UPDATE</a>
+                    <a href="/products/pay/{{ product.id }}" class="btn btn-outline-success">PAY</a>
                 </div>
               </div>
             </div>
@@ -49,7 +53,7 @@
       <div class="icon-arrow no-outline icon-arrow-left bg-light"></div>
       <div class="icon-arrow no-outline icon-arrow-right bg-light"></div>
       <div class="text-center mt-5">
-        <a href="shop-sidebar.html" class="btn-link">View All Products</a>
+        <a href="" class="btn-link">View All Products</a>
       </div>
 
     </div>

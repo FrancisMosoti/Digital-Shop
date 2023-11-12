@@ -1,0 +1,22 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+        <div class="row col-4 d-flex m-auto">
+        <form method="post" action="">
+            {% csrf_token %}
+            <fieldset>
+                <legend class="border-bottom mb-4">Paying for {{ product.name }}</legend>
+                <label for="price">Amount</label><br>
+                <input name="price" value="Ksh. {{ product.price }}" class="form-control" type="text" disabled><br>
+                <input name="phone" placeholder="Enter phone number(2547...)" class="form-control" type="text"><br>
+
+
+            </fieldset>
+
+            <div class="form-group">
+                <input type="submit" Value="Pay" class="btn btn-info mt-4">
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
