@@ -61,7 +61,7 @@ def pay(request, id):
     product = Product.objects.get(id=id)
 
     if request.method == "POST":
-        phone = request.POST['phone-number']
+        phone = request.POST['phone']
         amount = product.price
         access_token = MpesaAccessToken.validated_mpesa_access_token
         api_url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"
